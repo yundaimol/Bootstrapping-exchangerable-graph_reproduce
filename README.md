@@ -50,10 +50,6 @@ $$
 
 ### Motif density
 
-We compute **induced subgraph densities**:
-
-$$P_R(G_n) = \frac{1}{\binom{n}{p}} \sum_{i_1<\cdots<i_p} \mathbf{1}(G(i_1,...,i_p) \simeq R)$$
-
 Motifs considered:
 
 - Edge (K2)
@@ -63,47 +59,19 @@ Motifs considered:
 
 ---
 
-### Bootstrap methods
-
-#### Empirical graphon bootstrap
-
-1. Construct empirical graphon:
-   
-   $$
-   \hat h(u,v) = A_{\lceil nu\rceil, \lceil nv\rceil}
-   $$
-
-2. Generate bootstrap graph:
-   - Sample $U_i^* \sim \text{Uniform}(0,1)$
-   - Sample edges using Bernoulli($\hat h(U_i^*,U_j^*)$)
-
-3. Compute motif density on resampled graph
-
----
-
-#### Histogram bootstrap (optional)
-
-- Graphon estimated via stochastic block model
-- Implemented using R package `blockmodels`
-- Block number selected via model selection criterion (approximate)
-
-Note: Exact implementation details in the original paper are incomplete.
-
----
-
 ## Simulation Setup
 
 ### Parameters
 
 - Sample size:
-  $$
+  $
   n \in \{25, 50, 75, \dots, 400\}
-  $$
+  $
 
 - Sparsity levels:
-  $$
+  $
   \rho_n \in \{0.02, 0.1, 0.25\}
-  $$
+  $
 
 - Bootstrap replications: 100  
 - Monte Carlo repetitions: 1000  
