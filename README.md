@@ -52,9 +52,7 @@ $$
 
 We compute **induced subgraph densities**:
 
-$$
-P_R(G_n) = \frac{1}{\binom{n}{p}} \sum_{i_1<\cdots<i_p} \mathbf{1}(G(i_1,...,i_p) \simeq R)
-$$
+$$P_R(G_n) = \frac{1}{\binom{n}{p}} \sum_{i_1<\cdots<i_p} \mathbf{1}(G(i_1,...,i_p) \simeq R)$$
 
 Motifs considered:
 
@@ -70,13 +68,14 @@ Motifs considered:
 #### Empirical graphon bootstrap
 
 1. Construct empirical graphon:
+   
    $$
    \hat h(u,v) = A_{\lceil nu\rceil, \lceil nv\rceil}
    $$
 
 2. Generate bootstrap graph:
-   - Sample $ U_i^* \sim \text{Uniform}(0,1)$
-   - Sample edges using Bernoulli($ \hat h(U_i^*,U_j^*)$)
+   - Sample $U_i^* \sim \text{Uniform}(0,1)$
+   - Sample edges using Bernoulli($\hat h(U_i^*,U_j^*)$)
 
 3. Compute motif density on resampled graph
 
