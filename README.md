@@ -75,8 +75,8 @@ Motifs considered:
    $$
 
 2. Generate bootstrap graph:
-   - Sample $U_i^* \sim \text{Uniform}(0,1)$
-   - Sample edges using Bernoulli($\hat h(U_i^*,U_j^*)$)
+   - Sample $ U_i^* \sim \text{Uniform}(0,1)$
+   - Sample edges using Bernoulli($ \hat h(U_i^*,U_j^*)$)
 
 3. Compute motif density on resampled graph
 
