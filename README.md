@@ -36,15 +36,15 @@ This repository includes:
 
 Graphs are generated from a graphon model:
 
-\[
+$$
 A_{ij} \sim \text{Bernoulli}(h_n(U_i, U_j)), \quad U_i \sim \text{Uniform}(0,1)
-\]
+$$
 
 where
 
-\[
+$$
 h_n(u,v) = \rho_n \cdot w(u,v), \quad \int w(u,v)\,du\,dv = 1
-\]
+$$
 
 ---
 
@@ -52,9 +52,9 @@ h_n(u,v) = \rho_n \cdot w(u,v), \quad \int w(u,v)\,du\,dv = 1
 
 We compute **induced subgraph densities**:
 
-\[
+$$
 P_R(G_n) = \frac{1}{\binom{n}{p}} \sum_{i_1<\cdots<i_p} \mathbf{1}(G(i_1,...,i_p) \simeq R)
-\]
+$$
 
 Motifs considered:
 
@@ -70,13 +70,13 @@ Motifs considered:
 #### Empirical graphon bootstrap
 
 1. Construct empirical graphon:
-   \[
+   $$
    \hat h(u,v) = A_{\lceil nu\rceil, \lceil nv\rceil}
-   \]
+   $$
 
 2. Generate bootstrap graph:
-   - Sample \(U_i^* \sim \text{Uniform}(0,1)\)
-   - Sample edges using Bernoulli(\(\hat h(U_i^*,U_j^*)\))
+   - Sample $U_i^* \sim \text{Uniform}(0,1)$
+   - Sample edges using Bernoulli($\hat h(U_i^*,U_j^*)$)
 
 3. Compute motif density on resampled graph
 
@@ -97,20 +97,20 @@ Note: Exact implementation details in the original paper are incomplete.
 ### Parameters
 
 - Sample size:
-  \[
+  $$
   n \in \{25, 50, 75, \dots, 400\}
-  \]
+  $$
 
 - Sparsity levels:
-  \[
+  $$
   \rho_n \in \{0.02, 0.1, 0.25\}
-  \]
+  $$
 
 - Bootstrap replications: 100  
 - Monte Carlo repetitions: 1000  
 - Nominal confidence level: 0.7  
 
-- Bootstrap sample size: \(m = n\)
+- Bootstrap sample size: $m = n$
 
 ---
 
@@ -118,9 +118,9 @@ Note: Exact implementation details in the original paper are incomplete.
 
 #### Gaussian
 
-\[
+$$
 w(u,v) \propto \exp\left(-\frac{(u-v)^2}{2(1/5)^2}\right)
-\]
+$$
 
 #### 2-block SBM
 
@@ -129,14 +129,14 @@ w(u,v) \propto \exp\left(-\frac{(u-v)^2}{2(1/5)^2}\right)
 
 #### Horseshoe
 
-\[
+$$
 w(u,v) \propto \frac{1}{(u-v)^2 + 0.01}
-\]
+$$
 
 All graphons are normalized to satisfy:
-\[
+$$
 \int w(u,v)\,du\,dv = 1
-\]
+$$
 
 ---
 
@@ -146,9 +146,9 @@ All graphons are normalized to satisfy:
 
 For each simulation:
 
-\[
+$$
 \text{Coverage} = \mathbf{1}(\theta \in CI)
-\]
+$$
 
 We report average coverage across Monte Carlo runs.
 
@@ -156,9 +156,9 @@ We report average coverage across Monte Carlo runs.
 
 ### Confidence interval width
 
-\[
+$$
 \text{Width} = CI_{\text{upper}} - CI_{\text{lower}}
-\]
+$$
 
 ---
 
@@ -166,11 +166,11 @@ We report average coverage across Monte Carlo runs.
 
 We use **percentile bootstrap**:
 
-\[
+$$
 CI = [q_{\alpha/2}, q_{1-\alpha/2}]
-\]
+$$
 
-with \(\alpha = 0.3\).
+with $\alpha = 0.3$.
 
 ---
 
