@@ -91,7 +91,7 @@ w(u,v) \propto
 1 & \text{if u\leq 0.5,v\leq 0.5}\\
 0.8 & \text{if u> 0.5,v> 0.5}\\
 0.25 & \text{otherwise} 
-\end{cases}
+\end{cases}.
 $$
 
 #### 2-block SBM
@@ -102,7 +102,7 @@ $$
 #### Horseshoe
 
 $$
-w(u,v) \propto \exp{-200(u-v^2)^2/2}+\exp{-200(u^2-v)^2/2}
+w(u,v) \propto \exp{(-200(u-v^2)^2/2)}+\exp{(-200(u^2-v)^2/2)}.
 $$
 
 All graphons are normalized to satisfy:
