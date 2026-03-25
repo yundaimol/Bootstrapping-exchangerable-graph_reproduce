@@ -85,14 +85,11 @@ Motifs considered:
 
 #### Gaussian
 
-$$
-w(u,v) \propto 
-\begin{cases}
-1 & \text{if u\leq 0.5,v\leq 0.5}\\
-0.8 & \text{if u> 0.5,v> 0.5}\\
-0.25 & \text{otherwise} 
-\end{cases}.
-$$
+w(u, v) is defined as:
+
+- 1        if u ≤ 0.5 and v ≤ 0.5  
+- 0.8      if u > 0.5 and v > 0.5  
+- 0.25     otherwise  
 
 #### 2-block SBM
 
