@@ -64,9 +64,9 @@ Motifs considered:
 ### Parameters
 
 - Sample size:
-  
+  $`
   n \in \{25, 50, 75, \dots, 400\}
-  
+  `$
 
 - Sparsity levels:
   $
