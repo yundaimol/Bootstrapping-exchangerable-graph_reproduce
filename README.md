@@ -102,11 +102,7 @@ $$
 #### Horseshoe
 
 $$
-w(u,v) \propto \frac{1}{(u-v^2)^2 + 0.01}
-$$
-
-$$
-w(u,v) \propto \frac{1}{(u^2-v)^2 + 0.01}
+w(u,v) \propto \exp{-200(u-v^2)^2/2}+\exp{-200(u^2-v)^2/2}
 $$
 
 All graphons are normalized to satisfy:
