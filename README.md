@@ -85,16 +85,17 @@ Motifs considered:
 
 #### Gaussian
 
+$$
+w(u,v) \propto \exp{(-200(u-v)^2/2)}.
+$$ 
+
+#### 2-block SBM
+
 w(u, v) is defined as:
 
 - 1        if u ≤ 0.5 and v ≤ 0.5  
 - 0.8      if u > 0.5 and v > 0.5  
 - 0.25     otherwise  
-
-#### 2-block SBM
-
-- Within block: high probability
-- Between block: low probability
 
 #### Horseshoe
 
