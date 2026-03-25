@@ -69,9 +69,9 @@ Motifs considered:
   `$
 
 - Sparsity levels:
-  $
+  $`
   \rho_n \in \{0.02, 0.1, 0.25\}
-  $
+  `$
 
 - Bootstrap replications: 100  
 - Monte Carlo repetitions: 1000  
