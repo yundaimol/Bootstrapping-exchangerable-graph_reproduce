@@ -86,7 +86,14 @@ Motifs considered:
 #### Gaussian
 
 $$
-w(u,v) \propto \exp\left(-\frac{(u-v)^2}{2(1/5)^2}\right)
+w(u,v) \propto 
+\left\{
+\begin{array}{ll}
+1 & \text{if u\leq 0.5,v\leq 0.5}\\
+0.8 & \text{if u> 0.5,v> 0.5}\\
+0.25 & \text{otherwise} 
+\end{array}
+\right.
 $$
 
 #### 2-block SBM
@@ -97,7 +104,11 @@ $$
 #### Horseshoe
 
 $$
-w(u,v) \propto \frac{1}{(u-v)^2 + 0.01}
+w(u,v) \propto \frac{1}{(u-v^2)^2 + 0.01}
+$$
+
+$$
+w(u,v) \propto \frac{1}{(u^2-v)^2 + 0.01}
 $$
 
 All graphons are normalized to satisfy:
